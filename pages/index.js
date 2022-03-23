@@ -3,8 +3,11 @@ import App from "../layouts/App";
 
 export default function Home() {
   return (
-    <div className="space-x-2">
-      Tailwind Css
+    <div className="grid grid-cols-3 gap-x-3">
+      <div className="bg-rose-500 w-full aspect-video flex items-center justify-center text-white">Tailwind CSS</div>
+      <div className="bg-rose-500 w-full aspect-video flex items-center justify-center text-white">Tailwind CSS</div>
+      <div className="bg-rose-500 w-full aspect-video flex items-center justify-center text-white">Tailwind CSS</div>
+
     </div>
   );
 }
