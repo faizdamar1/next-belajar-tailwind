@@ -8,6 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        facebook :"#1877F2",
+        twitter :"#1DA1F2",
+        messenger :"#0099FF",
+      },
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
         // display: ['Red Hat Mono']
