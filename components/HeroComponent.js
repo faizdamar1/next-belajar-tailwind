@@ -60,7 +60,7 @@ export default function HeroComponent() {
         <div className="container">
           <div className="w-full md:w-2/3">
             <header className="text-white py-4 sm:py-8 md:py-16">
-              <h1 className="text-xl md:text-3xl font-bold">New Revolu tion</h1>
+              <h1 className="text-xl md:text-3xl font-bold">New Revolution</h1>
               <p className="md:text-xl leading-relaxed font-light mt-4 mb-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
                 <a
