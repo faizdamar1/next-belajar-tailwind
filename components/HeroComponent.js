@@ -1,6 +1,10 @@
+import { Menu } from "@headlessui/react";
 import React from "react";
+import LineComponent from "./LineComponent";
+import DropdownLinkComponent from "./navbar/DropdownLinkComponent";
 import NavlinkComponent from "./navbar/NavlinkComponent";
 import NavlinkMComponent from "./navbar/NavlinkMComponent";
+import TransitionComponent from "./TransitionComponent";
 
 export default function HeroComponent() {
   const auth = {
@@ -14,7 +18,7 @@ export default function HeroComponent() {
     <div>
       <div className="bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
         <NavlinkMComponent />
-        <div className="hidden md:block border-b border-white/10 py-3 px-4">
+        <div className="hidden md:block border-b border-white/10 py-4 px-4">
           <div className="container">
             <nav className="flex items-center justify-between">
               <div className="flex items-center gap-x-2">
@@ -30,23 +34,56 @@ export default function HeroComponent() {
 
               {auth.check ? (
                 <div className="flex items-center gap-x-2">
-                  <NavlinkComponent className="flex items-center gap-x-2" href="#">
-                    {auth.user.name}{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4 text-white"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </NavlinkComponent>
+                  <NavlinkComponent className="" href="#"></NavlinkComponent>
+                  <Menu as="div" className="relative">
+                    <Menu.Button className="flex items-center hover:bg-transparent gap-x-2 text-white">
+                      {auth.user.name}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M19 9l-7 7-7-7"
+                        />
+                      </svg>
+                    </Menu.Button>
+                    <TransitionComponent>
+                      <Menu.Items
+                        as="div"
+                        className="shadow-sm border bg-white absolute right-0 top-0 mt-8 py-1 rounded w-56 overflow-hidden"
+                      >
+                        <DropdownLinkComponent href="#">
+                          Dashboard
+                        </DropdownLinkComponent>
+                        <DropdownLinkComponent href="#">
+                          Horizon
+                        </DropdownLinkComponent>
+                        <LineComponent />
+                        <DropdownLinkComponent href="#">
+                          Account Setting
+                        </DropdownLinkComponent>
+                        <DropdownLinkComponent href="#">
+                          Change Password
+                        </DropdownLinkComponent>
+                        <DropdownLinkComponent href="#">
+                          Favorites Articles
+                        </DropdownLinkComponent>
+                        <DropdownLinkComponent href="#">
+                          Help
+                        </DropdownLinkComponent>
+                        <LineComponent />
+                        <DropdownLinkComponent href="#">
+                          Logout
+                        </DropdownLinkComponent>
+                      </Menu.Items>
+                    </TransitionComponent>
+                  </Menu>
                 </div>
               ) : (
                 <div className="flex items-center gap-x-2">

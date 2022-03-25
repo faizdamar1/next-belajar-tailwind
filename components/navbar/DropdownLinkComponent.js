@@ -1,7 +1,9 @@
+
+
 import { Menu } from "@headlessui/react";
 import React from "react";
 
-export default function ResNavlinkComponent({ children, href }) {
+export default function DropdownLinkComponent({ children, href }) {
   return (
     <div>
       <Menu.Item>
