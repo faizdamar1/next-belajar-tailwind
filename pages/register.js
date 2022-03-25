@@ -65,7 +65,7 @@ export default function Register() {
           <span>
               Already have account ?{"  "}
               <Link href="/login">
-                  <a href="" className="text-indigo-500 font-medium">Login</a>
+                  <a href="" className="text-blue-500 font-medium">Login</a>
               </Link>
           </span>
         </div>

@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React from "react";
 import ResNavlinkComponent from "./ResNavlinkComponent";
-import { Menu, Transition } from "@headlessui/react";
+import { Menu } from "@headlessui/react";
 import LineComponent from "../LineComponent";
 import TransitionComponent from "../TransitionComponent";
 
-export default function NavlinkMComponent() {
+export default function NavbarMobile() {
   const auth = {
-    check: true,
+    check: false,
     user: {
       name: "Faiz D. Hernanda",
     },
@@ -44,10 +44,10 @@ export default function NavlinkMComponent() {
             className="shadow-sm border bg-white absolute right-0 mr-11 top-0 mt-4 py-1 rounded w-56 overflow-hidden "
           >
             <ResNavlinkComponent href="#">Home</ResNavlinkComponent>
-            <ResNavlinkComponent href="#">Articles</ResNavlinkComponent>
-            <ResNavlinkComponent href="#">Gallery</ResNavlinkComponent>
-            <ResNavlinkComponent href="#">About</ResNavlinkComponent>
-            <ResNavlinkComponent href="#">Contact</ResNavlinkComponent>
+            <ResNavlinkComponent href="/article">Articles</ResNavlinkComponent>
+            <ResNavlinkComponent href="/gallery">Gallery</ResNavlinkComponent>
+            <ResNavlinkComponent href="/about">About</ResNavlinkComponent>
+            <ResNavlinkComponent href="/contact">Contact</ResNavlinkComponent>
             <LineComponent />
 
             {auth.check ? (
@@ -67,8 +67,10 @@ export default function NavlinkMComponent() {
               </>
             ) : (
               <>
-                <ResNavlinkComponent href="#">Sign In</ResNavlinkComponent>
-                <ResNavlinkComponent href="#">Sign Up</ResNavlinkComponent>
+                <ResNavlinkComponent href="/login">Sign In</ResNavlinkComponent>
+                <ResNavlinkComponent href="/register">
+                  Sign Up
+                </ResNavlinkComponent>
               </>
             )}
           </Menu.Items>

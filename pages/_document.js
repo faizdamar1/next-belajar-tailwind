@@ -10,6 +10,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Andika+New+Basic&family=Open+Sans:wght@400;500;600&display=swap"
           rel="stylesheet"
         />
+        
       </Head>
       <body className="font-sans min-h-screen antialiased tracking-tighter text-gray-800">
         <Main />

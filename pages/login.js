@@ -30,13 +30,13 @@ export default function Login() {
             htmlFor="remember"
             id="remember"
           />
-          <a href="#">Forgot Password?</a>
+          <a className="text-blue-500 font-medium" href="#">Forgot Password?</a>
         </div>
         <div className="flex item-center justify-between mt-11">
           <span>
             Already have account ?{"  "}
             <Link href="/register">
-              <a href="" className="text-indigo-500 font-medium">
+              <a href="" className="text-blue-500 font-medium">
                 Register
               </a>
             </Link>
