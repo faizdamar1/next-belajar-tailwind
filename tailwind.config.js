@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        center:true,
+        padding: '1rem',
+      },
       colors: {
         facebook :"#1877F2",
         twitter :"#1DA1F2",
